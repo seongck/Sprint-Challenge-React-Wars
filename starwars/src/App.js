@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import axios from 'axios';
+import Character from './components/Character.js';
 
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
@@ -16,9 +17,17 @@ const App = () => {
       .catch( err => console.log(err))
   }, []);
 
+  if(!characters) return (
+    <div className="App">
+      <h1 className="Header">React Wars</h1>
+      <h2>Loading...</h2>
+    </div>
+  )
+
   return (
     <div className="App">
       <h1 className="Header">React Wars</h1>
+        {characters.map( character => <Character info={character} />)}
     </div>
   );
 }
