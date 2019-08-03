@@ -27,7 +27,7 @@ const App = () => {
   return (
     <div className="App">
       <h1 className="Header">React Wars</h1>
-        {characters.map( character => <Character info={character} />)}
+      {characters.map( character => <Character info={character} />)}
     </div>
   );
 }
