@@ -2,6 +2,14 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import axios from 'axios';
 import Character from './components/Character.js';
+import styled from 'styled-components';
+
+const Wrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1% 5%;
+  justify-content: center;
+`;
 
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
@@ -27,7 +35,9 @@ const App = () => {
   return (
     <div className="App">
       <h1 className="Header">React Wars</h1>
-      {characters.map( character => <Character info={character} />)}
+      <Wrapper>
+        {characters.map( character => <Character info={character} />)}
+      </Wrapper>
     </div>
   );
 }
