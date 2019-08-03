@@ -5,7 +5,8 @@ const capitalizeFirstLetter = (string) =>
       string[0] ? `${string[0].toUpperCase()}${string.substring(1)}` : '';
 
 const Card = styled.div`
-  background: rgba(255 ,255, 255, 0.7);  
+  background: rgba(210, 180, 140, 0.6);  
+  //background: rgba(255, 255, 255, 0.4);  
   color: rgba(0, 0, 0, 0.7);
   padding: 1% 3% 2%;
   margin: 10px;
